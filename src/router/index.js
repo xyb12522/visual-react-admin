@@ -3,7 +3,10 @@ import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { getUserInfo } from "@/store/actions";
 import Layout from "@/views/layout";
-import Login from "@/views/login";
+// import Login from "@/views/login";
+import Loadable from 'react-loadable';
+import Loading from '@/components/Loading'
+const Login = Loadable({loader: () => import('@/views/login'),loading: Loading});
 class Router extends React.Component {
   render() {
     const { token, role, getUserInfo } = this.props;

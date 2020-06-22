@@ -14,8 +14,8 @@ const Loading = () => {
   }, []);
 
   return (
-    <div className="app-container">
-      <Spin />
+    <div className="app-container" style={{ paddingTop: 100, textAlign: 'center' }}>
+      <Spin size="large" tip={"Loading..."} />
     </div>
   );
 };
